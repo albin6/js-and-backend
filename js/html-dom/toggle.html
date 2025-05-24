@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .common {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .red {
+        background-color: red;
+        color: white;
+      }
+      .blue {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg" class="common red">
+      <button id="toggle-button">toggle</button>
+    </div>
+    <script>
+      document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+      const btn = document.getElementById("toggle-button");
+      const bg = document.getElementById("bg");
+      btn.addEventListener("click", () => {
+        if (bg.classList.contains("red")) {
+          bg.classList.remove("red");
+          bg.classList.add("blue");
+        } else {
+          bg.classList.remove("blue");
+          bg.classList.add("red");
+        }
+      });
+    </script>
+  </body>
+</html>

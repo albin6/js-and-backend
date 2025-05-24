@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button id="decrement">decrement</button>
+      <span id="display"></span>
+      <input type="hidden" value="0" id="hidden-value" />
+      <button id="increment">increment</button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const val = document.getElementById("hidden-value");
+        const display = document.getElementById("display");
+        display.textContent = val.value;
+
+        const increment = document.getElementById("increment");
+        const decrement = document.getElementById("decrement");
+
+        increment.addEventListener("click", () => {
+          val.value = +val.value + 1;
+          display.textContent = val.value;
+        });
+
+        decrement.addEventListener("click", () => {
+          val.value -= 1;
+          display.textContent = val.value;
+        });
+      });
+    </script>
+  </body>
+</html>
