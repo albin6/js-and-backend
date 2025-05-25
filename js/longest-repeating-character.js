@@ -11,7 +11,7 @@ function findLongestRepeatingCharacters(str) {
       char = str[i];
     }
   }
-  return char;
+  return char.repeat(max);
 }
 
 const str = "etrrrrtutraaaaa"; // "aaaaa"
