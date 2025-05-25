@@ -5,10 +5,18 @@ function findLongestSum(nums) {
   let sum = 0;
   while (curr) {
     sum += curr[index];
-    if (index + 1 > nums[index].length || index + 1 > nums.length) {
+    if (index > nums[currIndex].length - 1 || currIndex > nums.length - 1) {
       break;
     }
-    if (curr[index + 1] > nums[currIndex + 1][index]) {
+
+    let stayInCurr =
+      index === nums[currIndex].length - 1
+        ? false
+        : currIndex === nums.length - 1
+        ? true
+        : false;
+
+    if (stayInCurr) {
       curr = curr;
       index = index + 1;
     } else {
