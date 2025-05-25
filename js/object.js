@@ -1,14 +1,16 @@
-// const users = {
-//   name: "Albin",
-//   age: 21,
-// };
+const users = {};
 
-// Object.seal(users);
+Object.defineProperty(users, "name", {
+  value: "Albin",
+  writable: false,
+  enumerable: false,
+  configurable: true,
+});
 
-// users.name = "Arshad";
+// users.name = "Arshad"; // no change
 
-// Object.freeze(users);
+for (const key in users) {
+  console.log(users[key]);
+}
 
-// users.name = "Albin";
-
-// console.log(users.name);
+console.log(users);
