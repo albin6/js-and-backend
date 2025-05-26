@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/js/reverse-string-in-place.js",
+      "program": "${workspaceFolder}/js/remove-continuous-odd.js",
       "runtimeExecutable": "/home/xlone/.nvm/versions/node/v22.14.0/bin/node"
     }
   ]
