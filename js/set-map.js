@@ -11,6 +11,8 @@ const map = new Map([
   ["age", 21],
 ]);
 
+map.set("isActive", true);
+
 for (const key of map) {
   console.log(key);
 }
