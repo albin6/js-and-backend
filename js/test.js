@@ -45,3 +45,8 @@
 // const obj = Object.freeze({ name: "John" });
 // obj.name = "Jane";
 // console.log(obj.name);
+
+// console.log(0 == false);
+// console.log("" == 0);
+// console.log(null == undefined);
+// console.log([] == false);
