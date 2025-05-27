@@ -19,6 +19,7 @@ const user = {
   address: {
     city: "Paris",
   },
+  hobbies: [1, 2, 3, [4, 5]],
 };
 
 deepFreeze(user);
@@ -26,3 +27,7 @@ deepFreeze(user);
 user.address.city = "Mumbai";
 
 console.log(user.address.city);
+
+user.hobbies[3] = [8];
+
+console.log(user);
