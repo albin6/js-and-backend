@@ -35,16 +35,18 @@ const p1 = function () {
   });
 };
 
-const p2 = function () {
+const p2 = function (data) {
   return new Promise((resolve, reject) => {
+    console.log(data);
     setTimeout(() => {
       resolve("promise two");
     }, 1000);
   });
 };
 
-const p3 = function () {
+const p3 = function (data) {
   return new Promise((resolve, reject) => {
+    console.log(data);
     setTimeout(() => {
       resolve("promise three");
     }, 1000);
@@ -54,4 +56,5 @@ const p3 = function () {
 p1()
   .then(p2)
   .then(p3)
+  .then((data) => console.log(data))
   .catch((err) => console.log(err));
